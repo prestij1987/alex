@@ -1,33 +1,60 @@
-<!DOCTYPE html>
+{% load static %}
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Негабаритные перевозки, монтаж и такелаж оборудования, собственное проектное бюро">
     <title>push_pull</title>
-    <link rel="stylesheet" href="css/style_web.css">
+    <link rel="shortcut icon" type="image/jpg" class="logo" href="static/mainpage/image_project/logo.jpg" alt="логотип"/>
+
+    <link rel="stylesheet" href="static/mainpage/css/style_web.css">
     
-    <link rel="stylesheet" href="html/DST.html">
-    <link rel="stylesheet" href="html/ing.html">
-    <link rel="stylesheet" href="html/project_trip.html">
    
-    <script src="J_S/main_web.js"></script>
+    <script src="static/mainpage/J_S/main_web.js"></script>
 </head>
 <body>
     <div id="golova">
-        <img class='logotip' src="image_project/logo.jpg" alt="логотип">
-    <h1>Тяни-толкай негабаритные и проектные перевозки услуги такелажа</h1>
+        
+        <img class='logotip' src="static/mainpage/image_project/logo.jpg" alt="логотип" >
+        
+        <!--Заголовок сайта-->
     </div>
+    <div>
+         <a href="#"><ion-icon name="v-kontakte"></ion-icon></a>
+        <a href="#"><ion-icon name="telegram"></ion-icon></a>
+       
+        
+        <img  class='logotip2' src="static/mainpage/image_project/zastavka.jpg" alt="zastav">
+     </div>   
+    <h1 class="zagol">Тяни-толкай негабаритные и проектные перевозки </h1>
+    </div>
+    <div class="photo-cont">    
+        <div class="photo-1">
+            <img src='static/mainpage/image_project/tral_web.jpg' />
+        </div>
+        <div class="photo-2">
+            <img src="static/mainpage/image_project/tral_web.jpg2" alt="картинка " />
+        </div>
+    </div>
+    <div class="body1">
     <h3>Если не довезем тогда дотолкаем!!</h3>
     
 
-    <form id='search'action="">
+    <form id='search' action="">
         <input type="text" placeholder="Поиск по сайту">
         <button type="submit">поиск</button>
+        <input class='but_zap' type="submit" value="Отправить запрос на расчет"  placeholder="Заказать расчет" onclick="zapros_out">
     </form>
-
-    <form  id='zapros' action="">
-        <input type="submit"  value="Отправить запрос на расчет"  placeholder="Заказать расчет" onclick="zapros_out">
-        
+    </div>
+    <form id='zapros' action="">
+    {% comment %}   
+    СДЕЛАТЬ: Модель, Форму, Сохранение, Отправку в ТГ бот.....
+    var number = 'Введите телефон ';
+    var email = 'Введите почту ';
+function zapros_out() { // Форма обратной связи
+    var num = document.getElementById('zapros');
+  }
+    {% endcomment%}
+       
     </form>
     <div id="menu">
         <li class="menu_list">
@@ -56,25 +83,22 @@
 
         <input type="text" id="city_2" value="Разгрузка">
         <select name="#" id="way_2">
-            <option value="1">Санкт-Петербург</option>
-            <option value="2">Москва</option>
-            <option value="3">Казань</option>
-            <option value="4">Краснодар</option>
+            <option>Санкт-Петербург</option>
+            <option>Москва</option>
+            <option>Казань</option>
+            <option>Краснодар</option>
             </select>
-        <button id="knopka" value="расчитать">расчитать</button onclick>
+        <input type="button" onclick="calc()" value="расчитать">
     </div>
   
-    <div>content</div>
-    <div>
+      <div>
         Существуют установленные нормы размеров перевозимого груза.
 Если груз по ширине превышает 2,55 метров, по высоте — 4 метра, а длине — 20 метров, то он считается негабаритным.
-
 Доставка негабаритного груза, это сложный процесс – компания «Тяни-Толкай» гарантирует доставку негабаритного груза в установленные сроки., при соблюдении всех правил и нормативов.
-
+<a href="https://onlinegibdd.ru/articles/view/perevozka-negabarita?ysclid=m2xisj6tbq28906602">Правила перевозки негабаритных грузов</a>
 Самостоятельно перевезти негабаритный груз крайне сложно, так как есть строго регламентированные правила дорожного движения.
 Основной гарантией безопасности являются квалифицированные сотрудники и автомобили прикрытия. Их функция — сопровождение негабаритных грузов и предупреждение других автовладельцев о возможных сложностях на дороге. Необходимость транспорта сопровождения (прикрытия) определяет Госавтоинспекция.
-
-К негабаритному грузу относится:
+К негабаритному грузу относится:</div>
 <li id="list_gruz">
     <ul>Различное промышленное и сельхоз оборудование.</ul>
     <ul>Спецтехника и строительное оборудование.</ul>
@@ -83,12 +107,12 @@
     <ul>Строительные изделия и готовые конструкции.</ul>
     <ul>Трубопроводы и их элементы.</ul>
 </li>
-</div>
-<p></p>
+
+<div>
 Также в ПДД есть пункты, касающиеся непосредственно крупногабаритных грузов. Последние должны быть отмечены специальными знаками таблички должна быть светоотражающей. Сопровождать транспортное средства при перевозке крупногабаритного груза могут две или три машины: одна спереди и одна-две сзади. Каждую обклеивают специализированными наклейками желто-оранжевыми полосами, снабжают маячками и табличками.
 При несоблюдении правил можно получить штраф!
 Если вы хотите узнать цены перевозки негабаритного груза из вашего города до места назначения, а также задать вопросы относительно подготовки и документации, свяжитесь с нашими менеджерами, которые дадут исчерпывающие ответы и рассчитают точную стоимость.
-</p>
+</div>
     
 
     <!-- Контейнер меню -->
@@ -96,7 +120,7 @@
     <!-- Список меню -->
     <ul class="menu-list">
 
-        <footer>
+        <footer class="foot">
             <div class="waves">
                 <div class="wave" id="wave1"></div>
             </div>

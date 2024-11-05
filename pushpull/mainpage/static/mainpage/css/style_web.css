@@ -1,0 +1,205 @@
+
+body, html{margin: auto;
+padding: 0%;}
+
+#golova{
+    
+    display: inline-block;
+    position: relative;
+}
+
+ .zagol{
+   
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-weight: bold;
+    font-size: 44px;
+    color: #0946b1; }
+
+.logotip{
+    width: 145px;
+    height:130px;
+    border: #000 solid;}
+.logotip2{
+    width:100%;
+    height:100%;
+}    
+    
+
+
+
+#zapros{
+    text-align: right;
+    position: absolute;
+    font-size: 25px;
+    left: 750px;
+    height: 30px;
+    
+    margin-bottom: 0%;
+
+
+}  
+.photo-cont {
+    
+    width:100%;
+    height: 100%;
+   
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+}
+.photo-cont img {
+   
+    width:100%;
+    height: 100%;
+}
+.photo-cont .photo-1 {
+   
+    width:100%;
+    height: 100%;
+  
+}
+.photo-cont .photo-2 {
+
+    width:100%;
+    height: 100%;
+}
+
+
+@keyframes rotate {
+    0% {
+        opacity: 1;
+        transform: rotate(0) scale(1);
+    }
+    50% {
+        transform: rotate(0) scale(1);
+        opacity: 1;
+    } 
+    59.99999% {
+        transform: rotate(45deg) scale(3);
+        opacity: 0;
+        z-index: 1;
+    }   
+    60% {
+        opacity: 0;
+        z-index: -1;
+    }  
+    100% {
+        opacity: 1;
+    }  
+}  
+
+body{
+    background: white;
+    color: #000;
+}
+
+.but_zap{
+  float: right;
+  border-radius: 10px;
+  background: #8396b7;
+
+}
+#search{
+    position: relative;
+    
+}
+#list_gruz{
+    font-weight: bold;
+    font-family: Verdana;
+    margin: 0%;
+}
+ul{
+    margin: 0%;
+   
+}
+#menu{
+    display: inline-block; 
+    color: white;
+    margin-top: 0%;
+    / *  Элементы будут располагаться в одну строку  * /
+    
+
+ 
+   
+}
+.menu_list{
+    position: relative;
+    display: inline-block;
+}
+
+#menu a:link, #menu a:visited {
+    color: #000; / *  Цвет текста ссылок  * /
+}
+
+#menu a:hover, #menu a:active {
+    color: #F00; / *  Цвет текста ссылок при наведении и активном состоянии  * /
+}
+
+#menu_list{
+    width: 100%;
+    height: 40%;
+    background: white;
+}
+footer{
+    margin: 0%;
+    position: relative;/*относительное позиционирование*/
+    min-height: 40%;
+    right: 50px;
+    bottom: 0;
+    height: -40%;
+    width: 100%;/*на всю ширину*/
+    padding: 20px 50px;/*поля для контента*/
+    background:rgb(69, 64, 64);/*цвет футера*/
+    display: flex;
+    justify-content: center;/*в центре по горизонтали*/
+    align-items: center;/*в центре по вертикали*/
+    flex-direction: column;
+    margin-top: 100px;/*отступ сверху*/
+}
+footer.wave{
+    position: relative;/*абсолютное позиционирование*/
+    top: 100px;
+    left: 0;
+    width: 110%;
+    height: 70px;
+    
+}
+
+.menu{
+    position: relative;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px ;
+    flex-wrap: wrap;/*разрешен перенос на новую строку*/
+}
+
+
+.menu li{
+    list-style: none;/*удалить черные маркеры*/
+    color: white;
+}
+.social.li.a {
+    font-size: 2em;/*размер иконок*/
+    color: #fff;/*цвет иконок*/
+    margin: 0 10px;
+    display: inline-block;/*отображать как строчно-блочный элемент*/
+    transition: 0.5s;/*плавный переход*/
+}
+.menu.li.a {
+    font-size: 1.2em;/*размер ссылок меню*/
+    color: #fff;/*цвет ссылок меню*/
+    opacity: 0.75;/*значение прозрачности*/
+    margin: 15px;
+    text-decoration: none;/*ссылка без подчеркивания*/
+    display: inline-block;
+}
+.menu.li.a:hover {
+    opacity: 1;
+}
+footer.p {
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.1em;
+}
