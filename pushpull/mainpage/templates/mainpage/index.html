@@ -13,19 +13,15 @@
 </head>
 <body>
     <div id="golova">
-        
+        <h1 class="zagol">"Тяни-толкай" негабаритные перевозки </h1>
         <img class='logotip' src="static/mainpage/image_project/logo.jpg" alt="логотип" >
         
+        </div>
         <!--Заголовок сайта-->
-    </div>
-    <div>
-         <a href="#"><ion-icon name="v-kontakte"></ion-icon></a>
-        <a href="#"><ion-icon name="telegram"></ion-icon></a>
-       
-        
+    <div>          
         <img  class='logotip2' src="static/mainpage/image_project/zastavka.jpg" alt="zastav">
      </div>   
-    <h1 class="zagol">Тяни-толкай негабаритные и проектные перевозки </h1>
+    <h1 class="zagol">Перевозки по России и Ближнему Зарубежью </h1>
     </div>
     <div class="photo-cont">    
         <div class="photo-1">
@@ -40,9 +36,8 @@
     
 
     <form id='search' action="">
-        <input type="text" placeholder="Поиск по сайту">
-        <button type="submit">поиск</button>
-        <input class='but_zap' type="submit" value="Отправить запрос на расчет"  placeholder="Заказать расчет" onclick="zapros_out">
+        <a href="/">О Компании / Главная</a>
+        <input class='but_zap' type="submit" value="Получить консультацию"  placeholder="Заказать расчет" onclick="zapros_out">
     </form>
     </div>
     <form id='zapros' action="">
@@ -58,27 +53,22 @@ function zapros_out() { // Форма обратной связи
     </form>
     <div id="menu">
         <li class="menu_list">
-            <a href="#">Главная</a>
-            <a href="#">Услуги</a>
-            <a href="#">Парк техники</a>
+            <a href="/">Главная</a>
+            <a href="/uslugi">Услуги</a>
+            <a href="/park">Парк техники</a>
             <a href="#">Отзывы</a>
-            <a href="#">Фото наших работ</a>
-                <div>
-                <a href="html/DST.html">Перевозка дорожной техники</a>
-                <a href="html/ing.html"> Перевозка емкостного оборудования</a>
-                <a href="html/project_trip.html">Перевозка проектных грузов</a>
-                </div>
+            <a href="/project_trip">Фото наших работ</a>
             <a href="#">Контакты</a>
         </li>
     </div>
-    <div>
-        <h3>В ведите населенные пункты для расчета растояния</h3>
+    <div class="calc">
+        <h3>Калькулятор расчета</h3>
         <input type="text" id="city_1" value="Погрузка">
         <select name="#" id="way_1">
-        <option value="1">Москва</option>
-        <option value="2">Санкт-Петербург</option>
-        <option value="3">Казань</option>
-        <option value="4">Краснодар</option>
+        <option>Москва</option>
+        <option>Санкт-Петербург</option>
+        <option>Казань</option>
+        <option>Краснодар</option>
         </select>
 
         <input type="text" id="city_2" value="Разгрузка">
@@ -89,6 +79,7 @@ function zapros_out() { // Форма обратной связи
             <option>Краснодар</option>
             </select>
         <input type="button" onclick="calc()" value="расчитать">
+        <span id="final_price"></span> рублей
     </div>
   
       <div>
@@ -100,7 +91,7 @@ function zapros_out() { // Форма обратной связи
 Основной гарантией безопасности являются квалифицированные сотрудники и автомобили прикрытия. Их функция — сопровождение негабаритных грузов и предупреждение других автовладельцев о возможных сложностях на дороге. Необходимость транспорта сопровождения (прикрытия) определяет Госавтоинспекция.
 К негабаритному грузу относится:</div>
 <li id="list_gruz">
-    <ul>Различное промышленное и сельхоз оборудование.</ul>
+    <ul>Различное промышленное и сельхоз оборудование. <img src=".pushpull/mainpage/static/mainpage/image_project/bus_dost.jpg" alt="bus"></ul>
     <ul>Спецтехника и строительное оборудование.</ul>
     <ul>Резервуары для нефтепереработанных продуктов.</ul>
     <ul>Железобетонные и металлические изделия.</ul>

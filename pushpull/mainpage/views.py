@@ -11,3 +11,12 @@ def index(request):
                                 # podstanovka
         context
     )
+
+def uslugi(request):
+    context = {}
+    return render(
+        request,   # zapros
+        'mainpage/html/uslugi.html',  # put k shablonu
+                                # podstanovka
+        context
+    )

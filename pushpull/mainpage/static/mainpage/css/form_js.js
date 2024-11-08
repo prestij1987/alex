@@ -34,5 +34,5 @@ function serializeForm(formNode) {
       .map((element) => {
         const { name, value } = element
   
-        return { name, value }
-      })
+        return { name, value }}
+      

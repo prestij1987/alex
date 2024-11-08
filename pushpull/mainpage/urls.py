@@ -1,11 +1,11 @@
 
 
 from django.urls import path
-from .views import index
-#from .views import func_start
+from . import views
 
 urlpatterns = [
-    path('', index, name='home'),
+    path('',        views.index,  name='home'),
+    path('uslugi/', views.uslugi, name='home'),
     #path('mystring/', func_start, name='mystring')
     
 ]

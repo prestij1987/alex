@@ -1,11 +1,6 @@
 from django.contrib import admin
-from .models import Task
+from . import models
 
-@admin.register(Task)
-class TaskAdmin(admin.ModelAdmin):
-    list_display = [field.name for field in Task._meta.get_fields()]
-
-   # pass
-
-
-# Register your models here.
+@admin.register(models.Dist)
+class DistAdmin(admin.ModelAdmin):
+    list_display = [field.name for field in models.Dist._meta.get_fields()]

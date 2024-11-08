@@ -7,7 +7,7 @@ const Re = 6378.0        // km. Not used
 const earthRadius = 6371
 
 function Pifagor(p1, p2) {   // p.x, p.y, p.z
-  return sqrt(
+  return Math.sqrt(
     (p1.z - p2.z) * (p1.z - p2.z) +
     (p1.x - p2.x) * (p1.x - p2.x) +
     (p1.y - p2.y) * (p1.y - p2.y))
@@ -18,6 +18,7 @@ const degreesToRadians = degrees => degrees * (Math.PI / 180);
 const radiansToDegrees = radians => radians * (180 / Math.PI);
 
 function loc_to_sphere(location) {   // location: longitude, latitude, altitude
+  console.log(location);
   const alt = location.altitude / 1000.0         // km
 
   const lon = degreesToRadians(location.longitude)  
@@ -67,7 +68,8 @@ const cities = {
 
 
 function calc() {
-  console.log(way_1.value, way_2.value);
+  let result = Math.round(80*distance(cities[way_1.value], cities[way_2.value]));
+  final_price.innerHTML = result;
 }
 
 

@@ -1,12 +1,10 @@
-from secret import token
 import os
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pushpull.settings')
 import django
 django.setup()
-#from todolist import settings
-#settings.configure()
-from tasklist.models import Task
+from pushpull.secret import token
 import telebot
+from tasklist import models
 
 class MyBot(telebot.TeleBot):
 
@@ -49,18 +47,18 @@ def start(message):
     
 @bot.message_handler(commands= ['list'])
 def start(message):
-    tasks = Task.objects.all()
-    print(tasks)
+    dists = models.Dist.objects.all()
+    print(dists)
     print(message.text)
     new_message = ""
-    for t in tasks:
-        new_message += "%s %s %s %s\n" % (
-            t.given, t.deadline, t.done, t.description
+    for t in dists:
+        new_message += "%s\n" % (
+            str(t)
         )
-    bot.add_user(message)
+    #bot.add_user(message)
     bot.send_message(
         message.chat.id,
-        '<b>Твои задачи: </b>\n%s' % new_message,
+        '<b>Поездки: </b>\n%s' % new_message,
         parse_mode='html')
 
 bot.polling(none_stop=True)
