@@ -222,19 +222,3 @@ footer.p {
     margin-top: 15px;
     font-size: 1.1em;
 }
-
-
-div {
-    width: 100px;
-    height: 250px;
-    background-color: orange;
-    margin: 0 auto;
-    border: 3px solid;
-    /* анимируем */
-    transition: transform 2s;
-  }
-  
-  div:hover {
-    /* сдвигаем при наведении */
-    transform: skew(20deg, 10deg);
-  }
