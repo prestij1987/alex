@@ -37,3 +37,11 @@ def otzyv(request):
                                
         context
     )
+
+def formaotvet(request):
+    context = {}
+    return render(
+        request,
+        'mainpage/html/formaotvet.html',
+        context
+    )
