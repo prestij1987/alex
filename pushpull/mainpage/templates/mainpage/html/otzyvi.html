@@ -6,6 +6,12 @@
 </head>
 <body>
   <h1>Здесь вы можете оставить свои отзывы о качестве выполненых работ</h1>
-   
+  <form action={% url 'otzyvi' %} method="post">
+    {% csrf_token %}
+    <label for="theme">Тема: </label><input id="theme" name="theme"><br />
+    <label for="txt">Сообщение: </label><br /><textarea id="txt" name="txt" rows="10" cols="50" >
+      </textarea><br />
+    <input type="submit" value="Отозваться">
+  </form>
 </body>
 </html>
