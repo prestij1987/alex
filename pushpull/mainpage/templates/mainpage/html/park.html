@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    {% load static %}
 </head>
 <body>
-      {{ park techniki }}
-    {{% <a href="pushpull/mainpage/static/mainpage/image_project/image_shema/схем_трала_1.jpg"></a>
-    <a href="pushpull/mainpage/static/mainpage/image_project/image_shema/Трал 70т схема.jpg"></a>
-        %}}
+    <h1>park techniki</h1> 
+    <img src={% static "mainpage/image_project/image_shema/схем_трала_1.jpg" %}>
+    <img src={% static "mainpage/image_project/image_shema/Трал 70т схема.jpg" %}>
+    
        
 </body>
 </html>
