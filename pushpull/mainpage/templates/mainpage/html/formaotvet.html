@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<html>
+<body>
+    <div class="form-container">
+        <h2>Форма обратной связи</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Электронная почта:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Сообщение:</label>
+                <textarea id="message" rows="4" required></textarea>
+            </div>
+            <button type="submit">Отправить</button>
+        </form>
+        <div id="responseMessage" style="margin-top: 20px;"></div>
+    </div>
+    
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Предотвращаем стандартное поведение формы
+            
+            // Получаем значения полей
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+    
+            // Здесь можно добавить код для отправки данных на сервер
+    
+            // Для примера просто выводим сообщение
+            document.getElementById('responseMessage').innerText = Спасибо, ${name}! Ваше сообщение отправлено.;
+            
+            // Очищаем форму
+            document.getElementById('contactForm').reset();
+        });
+    </script>
+    
+    
+</body>
+</html>

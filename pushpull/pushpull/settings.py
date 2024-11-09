@@ -58,7 +58,7 @@ ROOT_URLCONF = 'pushpull.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['tasklist.templates', 'train.template',],
+        'DIRS': ['mainpage.templates', 'train.template', 'osnova.templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

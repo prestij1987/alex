@@ -20,3 +20,20 @@ def uslugi(request):
                                 # podstanovka
         context
     )
+
+
+def park(request):
+    context = {'park techniki' : 'Чертежи и схемы тралов'}
+    return render(request,   
+        'mainpage/html/park.html',  
+                               
+        context
+    )
+
+def otzyv(request):
+    context = {}
+    return render(request,   
+        'mainpage/html/otzyvi.html',  
+                               
+        context
+    )

@@ -36,3 +36,7 @@ function serializeForm(formNode) {
   
         return { name, value }}
       
+
+var number = '';
+var name = '';        
+
