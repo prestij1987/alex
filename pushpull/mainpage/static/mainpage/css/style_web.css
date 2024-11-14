@@ -52,6 +52,12 @@ max-width: 95%}
 
 
 }  
+.photo-2 {
+  
+   
+    display: inline-flex;
+  
+}
 .photo-cont {
     
     width:100%;
@@ -65,18 +71,6 @@ max-width: 95%}
     width:100%;
     height: 100%;
 }
-.photo-cont .photo-1 {
-   
-    width:100%;
-    height: 100%;
-  
-}
-.photo-cont .photo-2 {
-
-    width:100%;
-    height: 100%;
-}
-
 
 @keyframes rotate {
     0% {
@@ -146,6 +140,26 @@ ul{
 
 .calc{
     background: rgb(37, 108, 189);
+    margin-top: 5px;
+
+}
+.cont_list {
+    display: flex; /* Используем Flexbox для выравнивания элементов */
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+}
+
+.image_container {
+    margin-right: 20px; /* Отступ между изображением и списком */
+}
+
+.img_bus {
+    width: 600px; /* Ширина изображения */
+    height: 300px; /* Высота изображения */
+}
+
+#list_text {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы */
 }
 #menu a:hover, #menu a:active {
     color: #F00; / *  Цвет текста ссылок при наведении и активном состоянии  * /

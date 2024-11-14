@@ -1,0 +1,16 @@
+*{
+    margin: auto;
+}
+
+img{
+    width: 300px;
+    height: 150px;
+    transition: width 0.5s ease;
+}
+.size:hover, img { width:500px;
+
+}
+.size{
+    display: inline-block;
+    
+}

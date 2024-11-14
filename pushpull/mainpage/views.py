@@ -22,6 +22,15 @@ def uslugi(request):
         context
     )
 
+def ing(request):
+    context = {}
+    return render(
+        request,   # zapros
+        'mainpage/html/ing.html',  # put k shablonu
+                                # podstanovka
+        context
+    )
+
 
 def park(request):
     context = {'park techniki' : 'Чертежи и схемы тралов'}

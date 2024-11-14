@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="Негабаритные перевозки, монтаж и такелаж оборудования, собственное проектное бюро">
     <title>push_pull</title>
-    <link rel="shortcut icon" type="image/jpg" class="logo" href='static/mainpage/image_project/logo.jpg' alt="логотип"/>
+    
 
     <link rel="stylesheet" href='static/mainpage/css/style_web.css'>
     
@@ -23,21 +23,11 @@
      </div>   
     <h1 class="zagol">Перевозки по России и Ближнему Зарубежью </h1>
     </div>
-    <div class="photo-cont">    
-        <div class="photo-1">
-            <img src='static/mainpage/image_project/tral_web.jpg' />
-        </div>
-        <div class="photo-2">
-            <img src="static/mainpage/image_project/tral_web.jpg2" alt="картинка " />
-        </div>
-    </div>
-    <div class="body1">
-    <h3>Если не довезем тогда дотолкаем!!</h3>
-    
+     
 
-    <form id='search' action="">
+    <form id='search' action="" style="margin-top: 15px;">
         <a href="/">О Компании / Главная</a>
-        <a class='but_zap' type="submit" value="Получить консультацию" href="/formaotvet"  >Получить</a>
+        <a class='but_zap' type="submit" value="Получить консультацию" href="/formaotvet"  >Получить консультацию</a>
     </form>
     </div>
     <form id='zapros' action="">
@@ -81,25 +71,33 @@ function zapros_out() { // Форма обратной связи
         <input type="button" onclick="calc()" value="расчитать">
         <span id="final_price"></span> рублей
     </div>
-  
-      <div>
-        Существуют установленные нормы размеров перевозимого груза.
+    <div class="photo-2" style="margin-top: 20px">
+        <img src="static/mainpage/image_project/tral_web.jpg" alt="картинка " style="width: 575px; height: 300px; margin-right: 5px;"/>
+        <img src="static/mainpage/image_project/tral_web2.jpg" alt="картинка2 " style="width: 575px; height: 300px"/>
+    </div>
+<div style="margin-top: 20px;">
+Негабаритные перевозки это отдельная категория груза для которого существуют установленные нормы размеров перевозимого груза.
 Если груз по ширине превышает 2,55 метров, по высоте — 4 метра, а длине — 20 метров, то он считается негабаритным.
 Доставка негабаритного груза, это сложный процесс – компания «Тяни-Толкай» гарантирует доставку негабаритного груза в установленные сроки., при соблюдении всех правил и нормативов.
 <a href="https://onlinegibdd.ru/articles/view/perevozka-negabarita?ysclid=m2xisj6tbq28906602">Правила перевозки негабаритных грузов</a>
 Самостоятельно перевезти негабаритный груз крайне сложно, так как есть строго регламентированные правила дорожного движения.
 Основной гарантией безопасности являются квалифицированные сотрудники и автомобили прикрытия. Их функция — сопровождение негабаритных грузов и предупреждение других автовладельцев о возможных сложностях на дороге. Необходимость транспорта сопровождения (прикрытия) определяет Госавтоинспекция.
 К негабаритному грузу относится:</div>
-<li id="list_gruz">
-    <ul>Различное промышленное и сельхоз оборудование. <img src=".pushpull/mainpage/static/mainpage/image_project/bus_dost.jpg" alt="bus"></ul>
-    <ul>Спецтехника и строительное оборудование.</ul>
-    <ul>Резервуары для нефтепереработанных продуктов.</ul>
-    <ul>Железобетонные и металлические изделия.</ul>
-    <ul>Строительные изделия и готовые конструкции.</ul>
-    <ul>Трубопроводы и их элементы.</ul>
-</li>
-
-<div>
+<div class="cont_list">
+    <div class="image_container">
+        <img src="/static/mainpage/image_project/bus_dost.jpg" alt="bus" class="img_bus" style="width: 300px; height: 200px;">
+    </div>
+    <div id="list_text" style="font-size: 23px; font-family: Verdana, Geneva, Tahoma, sans-serif;">  
+        <ul>
+            <li>Различное промышленное и сельхоз оборудование.</li>
+            <li>Спецтехника и строительное оборудование.</li>
+            <li>Резервуары для нефтепеработанных продуктов.</li>
+            <li>Железобетонные и металлические изделия.</li>
+            <li>Строительные изделия и готовые конструкции.</li>
+            <li>Трубопроводы и их элементы.</li>
+        </ul>
+    </div>
+</div>
 Также в ПДД есть пункты, касающиеся непосредственно крупногабаритных грузов. Последние должны быть отмечены специальными знаками таблички должна быть светоотражающей. Сопровождать транспортное средства при перевозке крупногабаритного груза могут две или три машины: одна спереди и одна-две сзади. Каждую обклеивают специализированными наклейками желто-оранжевыми полосами, снабжают маячками и табличками.
 При несоблюдении правил можно получить штраф!
 Если вы хотите узнать цены перевозки негабаритного груза из вашего города до места назначения, а также задать вопросы относительно подготовки и документации, свяжитесь с нашими менеджерами, которые дадут исчерпывающие ответы и рассчитают точную стоимость.
@@ -120,12 +118,12 @@ function zapros_out() { // Форма обратной связи
                 <li><a href="telegram.com"><ion-icon name="telegram">89166389327</ion-icon></a></li>
                
             </ul>
-            <ul class="menu">
+            <ul class="menu" style="margin-right: 40px;">
                
-                <li><a href="#">Вакансии</a></li>
-                <li><a href="#">Партнеры</a></li>
-                <li><a href="#">Правовая информация</a></li>
-                <li><a href="#">Публичная оферта</a></li>
+                <li><a href="hh.ru">Вакансии</a></li>
+                <li><a href="negabarit-1.ru">Партнеры</a></li>
+                <li><a href="https://pkgo.ru/upload/medialibrary/389/389cbdc599874959f4636e50c1f532b4.pdf">Правовая информация</a></li>
+                <li><a href="https://secrets.tinkoff.ru/documents/dogovor-publichnoj-oferty-ob-okazanii-uslug/?ysclid=m3hiwhshzt958898832">Публичная оферта</a></li>
             </ul>
             <p>©2024 Академия Топ| Все права защищены</p>
         </footer>
