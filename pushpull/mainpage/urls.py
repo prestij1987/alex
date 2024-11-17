@@ -1,7 +1,7 @@
 
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
@@ -14,6 +14,7 @@ urlpatterns = [
     path('ing/',         views.ing,        name='ing'),
     path('otzyvi/',      views.otzyv,      name='otzyvi'),
     path('formaotvet/',  views.formaotvet, name='formaotvet'),
+    path('work/', views.work, name='work'),
     
     #path('mystring/', func_start, name='mystring'),
     

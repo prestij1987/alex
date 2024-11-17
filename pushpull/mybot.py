@@ -2,9 +2,10 @@ import os
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pushpull.settings')
 import django
 django.setup()
-from pushpull.secret import token
-import telebot
+from secret import token
+import telebot 
 from tasklist import models
+from mainpage import models
 
 class MyBot(telebot.TeleBot):
 
@@ -50,7 +51,7 @@ def start(message):
     dists = models.Dist.objects.all()
     print(dists)
     print(message.text)
-    new_message = ""
+    new_message = "Ожидайте"
     for t in dists:
         new_message += "%s\n" % (
             str(t)
@@ -62,3 +63,20 @@ def start(message):
         parse_mode='html')
 
 bot.polling(none_stop=True)
+
+
+@bot.message_hadler(commands=['order'])
+def start(message):
+    zapros = models.Zapros.objects.all()
+    print(zapros)
+    print(message.text)
+    new_message = ''
+    for z in zapros:
+        new_message += 'стоимость равна='(
+            str(z)
+        )
+
+    bot.send_message(
+    message.chat.id,
+    '<b>Точка загрузки и точка выгрузки: </b>\n%s' % new_message,
+    parse_mode='html')

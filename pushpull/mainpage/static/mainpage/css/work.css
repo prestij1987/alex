@@ -1,0 +1,29 @@
+*{
+    margin: 10px;
+}
+
+
+div {
+    margin-top: 10px;
+    margin: 10px;
+    
+    
+    display: inline;
+    width: 300px;
+    height: 200px;
+    border-color: black;
+    border: solid 2px;
+}
+
+.size {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    transition: width 5s, height 5s, background-color 5s; /* Время эффекта */
+   }
+   .size:hover {
+   
+    width: 200px;
+    height: 200px;
+    background-color: red;
+   }

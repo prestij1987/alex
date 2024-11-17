@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 
 
 class Book(models.Model):
-    title = models.CharField(max_length=150)
+    title = models.CharField(max_length=50)
     cover = models.ImageField(upload_to='photo/')
     book = models.FileField(upload_to='note/')
 

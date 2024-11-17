@@ -200,8 +200,10 @@ footer.wave{
     position: relative;
     color: white;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-right: 15px;
+    max-width: 100%;
+    gap: 10px;
+
     margin: 20px ;
     flex-wrap: wrap;/*разрешен перенос на новую строку*/
 }
@@ -231,6 +233,12 @@ footer.wave{
 }
 footer.p {
     color: #fff;
-    text-align: center;
-    margin-top: 15px;}
+    
+    margin-top: 15px;
+    margin-right: 15px;}
+
+ .menu-container {
+    margin-right: 15px;
+ }   
+
    

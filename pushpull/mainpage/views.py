@@ -40,6 +40,15 @@ def park(request):
         context
     )
 
+def work(request):
+    context = {'Фото выполненных работ' : 'dist'}
+    return render(request,   
+        'mainpage/html/work.html',  
+                               
+        context
+    )
+
+
 
 def otzyv(request):
     if request.method == "POST":
