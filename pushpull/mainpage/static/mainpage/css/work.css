@@ -3,27 +3,30 @@
 }
 
 
-div {
-    margin-top: 10px;
-    margin: 10px;
-    
-    
-    display: inline;
+.size {
     width: 300px;
-    height: 200px;
-    border-color: black;
-    border: solid 2px;
+    height: 250px;
+    display: inline;
+    
 }
 
-.size {
-    width: 100px;
-    height: 100px;
-    background-color: blue;
-    transition: width 5s, height 5s, background-color 5s; /* Время эффекта */
-   }
-   .size:hover {
-   
+img{
     width: 200px;
-    height: 200px;
-    background-color: red;
+    height: 150px;
+}   
+    
+
+div{ transition: width 5s, height 5s, background-color 5s; /* Время эффекта */
+    overflow: hidden;
    }
+.size:hover {
+   
+    width: 600px;
+    height: 400px;
+    
+   }
+
+.size:hover {
+    width: 600px;
+    height: 400px;
+}

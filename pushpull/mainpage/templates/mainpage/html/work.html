@@ -8,22 +8,49 @@
     {% load static %}
 </head>
 <body>
+   
     {% block content %}
-    <p class="size">
-        <img src="#" alt="фото1">
+    <p>
+     <a href="/">Главная</a>    
     </p>
-        
-    <div class="size2">
-        <img src="#" alt="фото2">
+    <div class="size">
+        <img src={% static "mainpage/image_project/work/work_foto_1.jpeg" %} alt='работа_1'>
     </div>
         
-    <div>
-        <img src="#" alt="фото3">
+    <div class="size">
+        <img src={% static "mainpage/image_project/work/work_photo_6.jpg" %} alt="работа_6">
+    </div>
+        
+    <div class="size">
+        <img src={% static "mainpage/image_project/work/work_photo_2.jpeg" %}alt="фото_2">
     </div>
 
-    <div>
-        <img src="#" alt="фото4">
+    <div class="size">
+        <img src={% static "mainpage/image_project/work/work_photo_3.jpeg" %} alt="фото_3">
     </div>
+
+    <div class="size">
+        <img src={% static "mainpage/image_project/work/work_photo_4.jpeg" %} alt="фото_4">
+    </div>
+    <div class="size">
+        <img src={% static "mainpage/image_project/work/work_photo_5.jpg" %} alt="фото_5">
+    </div>
+
+    <div class="size">
+        <img src={% static "mainpage/image_project/work/work_photo_7.jpeg" %} alt="фото_7">
+    </div>
+
+    <div class="size">
+        <img src={% static "mainpage/image_project/work/work_photo_8.jpeg" %} alt="фото7">
+    </div>
+
+
+
+
+
+
+    
+    
     {% endblock %}
     
 </body>
