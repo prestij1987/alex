@@ -77,3 +77,11 @@ def formaotvet(request):
         'mainpage/html/formaotvet.html',
         context
     )
+
+def zimnik(request):
+    context = {}
+    return render(
+        request,
+        'mainpage/html/zimnik.html',
+        context
+    )

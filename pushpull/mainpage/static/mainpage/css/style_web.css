@@ -7,11 +7,24 @@ body, html{margin: auto;
 padding: 0%;
 max-width: 95%}
 
+#main-head{
+    background-image: url(https://a.d-cd.net/cea119cs-960.jpg);
+    object-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1150px;
+    margin-top: -200px;
+    margin-bottom: -100px;
+    
+
+
+}
 #golova{
     
     display: inline-block;
-    position: absolute;
+    position: static;
     margin: 0px;
+    margin-top: 200px;
 }
 
  .zagol{
@@ -19,8 +32,10 @@ max-width: 95%}
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
     font-weight: bold;
     font-size: 44px;
-    color: #0946b1; 
-    background: #8396b7;
+    color: #021738; 
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: red;
+    opacity: .6;
     margin-bottom: 0%;
     margin-top: 0%;}
 
@@ -29,8 +44,9 @@ max-width: 95%}
     height:130px;
     border: #000 solid;
     border-radius: 50%;
-    border-color: #8396b7;
-    background-image: #8396b7;
+    border-color: #447ad6;
+    background-image: #5b86d1;
+    opacity: .4;
     }
 .logotip2{
     width:100%;
@@ -106,6 +122,9 @@ body{
   height: 50px;
   border-radius: 10px;
   background: #8396b7;
+  margin-top: 0px;
+  margin-right: 20px;
+  margin-bottom: -30px;
 
 }
 #search{
@@ -125,17 +144,28 @@ ul{
     display: inline-block; 
     color: white;
     margin-top: 0%;
-    margin-right: 25%;}
-/ *  Элементы будут располагаться в одну строку  * /
-      
+    margin-right: 40%;
+    text-decoration: none;
+    
+}      
 
 .menu_list{
     position: relative;
     display: inline-block;
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 150px;
+    padding: 10px 20px 30px 50px;
+    text-decoration: none;
+    
 }
 
 #menu a:link, #menu a:visited {
     color: #000; / *  Цвет текста ссылок  * /
+}
+
+.link {
+    margin-top: 5px;
 }
 
 .calc{
@@ -177,7 +207,7 @@ footer{
     right: 50px;
     bottom: 0;
     height: -40%;
-    width: 100%;/*на всю ширину*/
+    width: 95%;/*на всю ширину*/
     padding: 20px 50px;/*поля для контента*/
     background:grey;/*цвет футера*/
     display: flex;

@@ -51,7 +51,7 @@ def start(message):
     dists = models.Dist.objects.all()
     print(dists)
     print(message.text)
-    new_message = "Ожидайте"
+    new_message = "Введите пункт погрузки и выгрузки"
     for t in dists:
         new_message += "%s\n" % (
             str(t)
@@ -59,7 +59,7 @@ def start(message):
     #bot.add_user(message)
     bot.send_message(
         message.chat.id,
-        '<b>Поездки: </b>\n%s' % new_message,
+        '<b>Пункт погрузки: </b>\n%s' % new_message,
         parse_mode='html')
 
 bot.polling(none_stop=True)

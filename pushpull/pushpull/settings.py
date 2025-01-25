@@ -13,6 +13,23 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 from pathlib import Path
 import os
 
+ # Код для подключения чата к джанго не работает пишет ошибка приложения админ не находит его.
+'''
+from channels.routing import ProtocolTypeRouter
+from django.core.asgi import get_asgi_application
+
+django_asgi_app = get_asgi_application()
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "ChatApp.settings")
+application = ProtocolTypeRouter({
+    "http": django_asgi_app,
+    # Just HTTP for now. (We can add other protocols later.)
+})
+
+ASGI_APPLICATION = 'ChatApp.asgi.application' ''' 
+
+ASGI_APPLICATION = 'pushpull.asgi.application'
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -41,7 +58,11 @@ INSTALLED_APPS = [
     'tasklist','train',
     'mainpage','osnova',
     'account',
-    'upload_ap'
+    'upload_ap',
+    'channels',
+    'chat',
+
+  
 ]
 
 MIDDLEWARE = [
@@ -59,7 +80,7 @@ ROOT_URLCONF = 'pushpull.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['mainpage.templates', 'train.template', 'osnova.templates'],
+        'DIRS': [os.path.join(BASE_DIR, 'mainpage.templates', 'train.template', 'osnova.templates', 'chat.templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -83,11 +104,16 @@ WSGI_APPLICATION = 'pushpull.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "OPTIONS": {
+        'NAME': 'push_db',
+        'USER': 'prestij1987',
+        'PASSWORD': '123',
+        'HOST': 'localhost'
+       
+        }}
+
+''' "OPTIONS": {
             "service": "my_service"
-        }}}
-
-
+        }'''
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators

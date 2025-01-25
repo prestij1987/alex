@@ -15,6 +15,7 @@ urlpatterns = [
     path('otzyvi/',      views.otzyv,      name='otzyvi'),
     path('formaotvet/',  views.formaotvet, name='formaotvet'),
     path('work/', views.work, name='work'),
+    path('zimnik/', views.zimnik, name='zimnik'),
     
     #path('mystring/', func_start, name='mystring'),
     

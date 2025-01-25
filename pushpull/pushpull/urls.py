@@ -27,4 +27,6 @@ urlpatterns = [
     path('tasklist/',    include('tasklist.urls')),
     path('osnova/',      include('osnova.urls')),
     path('account/',     include('account.urls')),
+    path('chat/', include('chat.urls'))
+    # path('chat/', include('chat.urls')),
 ]
